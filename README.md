@@ -78,6 +78,23 @@ Tecnologías utilizadas:
 - MongoDB instalado y en ejecución
 - Cuenta de OpenAI y clave API
 
+## Poblar la Base de Datos
+
+Para facilitar las pruebas y el desarrollo, hemos creado un script para poblar la base de datos con datos de ejemplo. Este script se encuentra en `backend/src/scripts/seedDatabase.js`.
+
+### Cómo ejecutar el script
+
+1. Asegúrate de estar en el directorio del backend:
+   ```
+   cd backend
+   ```
+
+2. Ejecuta el script con Node.js:
+   ```
+   node src/scripts/seedDatabase.js
+   ```
+
+
 ### Pasos para Ejecutar
 
 1. Clona el repositorio:
@@ -94,10 +111,10 @@ Tecnologías utilizadas:
    Crea un archivo `.env` en el directorio `backend/` con las siguientes variables:
    ```
    PORT=3001
-   MONGODB_URI=mongodb://localhost:27017/korea_importer
+   MONGODB_URI=URL mongo atlas
    OPENAI_API_KEY=tu_clave_api_de_openai_aqui
    ```
-
+   No olvide correr el scritpt  
 3. Inicia el backend:
    ```
    npm run dev
@@ -158,6 +175,48 @@ Para el despliegue en producción, asegúrate de:
 ## Contribuciones
 
 Las contribuciones son bienvenidas. Por favor, abre un issue para discutir los cambios propuestos antes de hacer un pull request.
+
+
+## Ejemplos de Uso
+
+Aquí tienes algunos ejemplos de datos que puedes usar para probar la aplicación:
+
+1. Ejemplo 1:
+   - Marca: Hyundai
+   - Línea: Accent
+   - Modelo: 2018
+   - Cilindraje: 1600
+   - Repuestos: Pastillas de freno delanteras
+
+2. Ejemplo 2:
+   - Marca: Kia
+   - Línea: Sportage
+   - Modelo: 2020
+   - Cilindraje: 2000
+   - Repuestos: Filtro de aceite, filtro de aire
+
+3. Ejemplo 3:
+   - Marca: Ssangyong
+   - Línea: Korando
+   - Modelo: 2019
+   - Cilindraje: 2200
+   - Repuestos: Amortiguadores traseros
+
+4. Ejemplo 4:
+   - Marca: Daewoo
+   - Línea: Lanos
+   - Modelo: 2002
+   - Cilindraje: 1500
+   - Repuestos: Kit de embrague
+
+5. Ejemplo 5:
+   - Marca: Samsung
+   - Línea: SM3
+   - Modelo: 2015
+   - Cilindraje: 1600
+   - Repuestos: Bomba de agua, termostato
+
+Estos ejemplos corresponden a los datos incluidos en el script de población de la base de datos y te permitirán probar diferentes escenarios en la aplicación.
 
 ## Licencia
 
