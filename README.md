@@ -86,12 +86,12 @@ Para facilitar las pruebas y el desarrollo, hemos creado un script para poblar l
 
 1. Asegúrate de estar en el directorio del backend:
    ```
-   cd backend
+   cd korea-importer-backend/src/scripts
    ```
 
 2. Ejecuta el script con Node.js:
    ```
-   node src/scripts/seedDatabase.js
+   node seedDatabase.js
    ```
 
 
