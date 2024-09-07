@@ -15,31 +15,28 @@ El proyecto está organizado en dos componentes principales:
 korea-importer/
 │
 ├── frontend/
-│ ├── public/
-│ ├── src/
-│ │ ├── pages/
-│ │ │ ├── KoreaImporter.js
-│ │ │ └── KoreaImporter.css
-│ │ ├── App.js
-│ │ └── index.js
-│ ├── Dockerfile
-│ └── package.json
+│   ├── public/
+│   ├── src/
+│   │   ├── pages/
+│   │   │   ├── KoreaImporter.js
+│   │   │   └── KoreaImporter.css
+│   │   ├── App.js
+│   │   └── index.js
+│   └── package.json
 │
 ├── backend/
-│ ├── src/
-│ │ ├── controllers/
-│ │ ├── models/
-│ │ │ └── repuesto.js
-│ │ ├── routes/
-│ │ ├── services/
-│ │ │ └── openai.js
-│ │ ├── db/
-│ │ │ └── mongoose.js
-│ │ └── app.js
-│ ├── Dockerfile
-│ └── package.json
+│   ├── src/
+│   │   ├── controllers/
+│   │   ├── models/
+│   │   │   └── repuesto.js
+│   │   ├── routes/
+│   │   ├── services/
+│   │   │   └── openai.js
+│   │   ├── db/
+│   │   │   └── mongoose.js
+│   │   └── app.js
+│   └── package.json
 │
-├── docker-compose.yml
 └── README.md
 
 
@@ -77,7 +74,9 @@ Tecnologías utilizadas:
 
 ### Requisitos Previos
 
-- Docker y Docker Compose instalados en el sistema
+- Node.js y npm instalados en el sistema
+- MongoDB instalado y en ejecución
+- Cuenta de OpenAI y clave API
 
 ### Pasos para Ejecutar
 
@@ -87,20 +86,35 @@ Tecnologías utilizadas:
    cd korea-importer
    ```
 
-2. Configura las variables de entorno:
-   - Crea un archivo `.env` en el directorio `backend/` con las siguientes variables:
-     ```
-     PORT=3001
-     MONGODB_URI=mongodb://mongodb:27017/korea_importer
-     OPENAI_API_KEY=tu_clave_api_de_openai_aqui
-     ```
-
-3. Construye y ejecuta los contenedores:
+2. Configura el backend:
    ```
-   docker-compose up --build
+   cd backend
+   npm install
+   ```
+   Crea un archivo `.env` en el directorio `backend/` con las siguientes variables:
+   ```
+   PORT=3001
+   MONGODB_URI=mongodb://localhost:27017/korea_importer
+   OPENAI_API_KEY=tu_clave_api_de_openai_aqui
    ```
 
-4. Accede a la aplicación:
+3. Inicia el backend:
+   ```
+   npm run dev
+   ```
+
+4. Configura el frontend:
+   ```
+   cd ../frontend
+   npm install
+   ```
+
+5. Inicia el frontend:
+   ```
+   npm start
+   ```
+
+6. Accede a la aplicación:
    - Frontend: http://localhost:3000
    - Backend API: http://localhost:3001
 
@@ -135,7 +149,11 @@ Para trabajar en el desarrollo de la aplicación:
 
 ## Despliegue
 
-La aplicación está contenerizada y lista para ser desplegada en cualquier plataforma que soporte Docker. Asegúrate de configurar las variables de entorno adecuadamente en el entorno de producción.
+Para el despliegue en producción, asegúrate de:
+1. Configurar las variables de entorno adecuadamente
+2. Construir la versión de producción del frontend: `cd frontend && npm run build`
+3. Configurar un servidor web como Nginx para servir los archivos estáticos del frontend
+4. Configurar un proceso manager como PM2 para ejecutar el backend
 
 ## Contribuciones
 
@@ -144,3 +162,5 @@ Las contribuciones son bienvenidas. Por favor, abre un issue para discutir los c
 ## Licencia
 
 Este proyecto está bajo la licencia MIT.
+
+## para ver con contenedores la aplicacion ver la rama Dockerapp
