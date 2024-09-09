@@ -53,8 +53,6 @@ korea-importer/
 - `backend/src/db/mongoose.js`: Configura la conexión a la base de datos MongoDB.
 - `backend/src/models/repuesto.js`: Define el esquema y modelo de Mongoose para los repuestos.
 - `backend/src/services/openai.js`: Contiene la lógica para interactuar con la API de OpenAI.
-- `backend/src/controllers/`: (Si existe) Contiene la lógica de negocio para manejar las solicitudes.
-- `backend/src/routes/`: (Si existe) Define las rutas de la API.
 - `backend/package.json`: Define las dependencias y scripts del proyecto backend.
 
 ### Scripts
