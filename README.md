@@ -170,7 +170,7 @@ Para facilitar las pruebas y el desarrollo, hemos creado un script para poblar l
 
 Solicitud en el frontend
 
-![alt text](image.png)
+![image](https://github.com/user-attachments/assets/cd875101-42bb-4fe6-91a5-6563f6de9a21)
 
 Logs de Backend
 
@@ -182,7 +182,7 @@ Respuesta de OpenAI: 1. Discos de freno delanteros: Los discos de freno y las pa
 
 Respuesta en el frontend
 
-![alt text](image-1.png)
+![image](https://github.com/user-attachments/assets/d8e3c81a-ff57-445f-b336-02f81ec3a28a)
 
 ## Desarrollo
 
